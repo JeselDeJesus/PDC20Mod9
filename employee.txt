@@ -1,0 +1,1 @@
+[{"id":1,"name":"Nathaniel Allapitan","age":21,"salary":50000},{"id":2,"name":"Killian Vitug","age":21,"salary":50000},{"id":3,"name":"Jesel De Jesus","age":21,"salary":100000}]

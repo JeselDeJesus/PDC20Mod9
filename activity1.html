@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, td, th {
+            border: 3px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            padding: 10px
+    }
+    
+             table tr:nth-child(odd){
+             background-color: rgb(80, 87, 20);
+    }
+    
+            table tr:nth-child(even){
+            background-color: rgb(5, 29, 36);
+    }
+    
+    </style>
+    </head>
+    <body>
+        <h2> Angular JS AJAX Application </h2>
+        <div ng-app="" ng-controller="employeeController">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th> 
+                    <th>Age</th>
+                    <th>Salary</th>
+                </tr>
+
+                <tr ng-repeat = "employee in employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.age}}</td>
+                    <td>{{employee.salary}}</td>
+                </tr>
+            </table>
+            <script>
+                function employeeController($scope, $http){
+                    var url ="employee.txt";
+
+                    $http.get(url).success(function(response){
+                        $scope.employees = respones;
+                    })
+                }
+            </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        </div>
+
+    </body>
+
+</html>
